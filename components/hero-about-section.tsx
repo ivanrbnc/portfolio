@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Github, Linkedin, Mail, Download, Instagram } from "lucide-react"
 
 const dynamicTexts = [
-  "I build projects",
+  "I build projects.",
   "Software Engineer",
   "Artificial Intelligence Enthusiast",
   "Data Science Specialist",
@@ -71,29 +71,37 @@ export function HeroAboutSection() {
   }
 
   return (
-    <section id="about" className="min-h-screen pt-20 pb-16">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section id="about" className="min-h-screen pt-32 sm:pt-28 lg:pt-24 pb-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Side - Hero Text */}
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-5xl md:text-7xl font-bold text-slate-800">Hello, I&apos;m</h1>
-              <h2 className="text-5xl md:text-7xl font-bold text-slate-800">Ivan Rabbani,</h2>
-              <div className="text-3xl md:text-4xl font-bold text-red-500 h-16 flex items-center">
+          <div className="space-y-6 lg:space-y-8">
+            <div className="space-y-2 lg:space-y-4">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-slate-800 leading-tight">
+                Hello, I&apos;m
+              </h1>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-slate-800 leading-tight">
+                Ivan Rabbani,
+              </h2>
+              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-red-500 h-12 sm:h-14 md:h-16 flex items-center">
                 <span className="border-r-2 border-red-500 pr-1 animate-pulse">{displayText}</span>
               </div>
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" onClick={scrollToProjects} className="transition-all duration-300 hover:scale-105">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <Button
+                size="lg"
+                onClick={scrollToProjects}
+                className="transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+              >
                 View My Work
               </Button>
               <Button
                 variant="outline"
                 size="lg"
                 onClick={downloadResume}
-                className="transition-all duration-300 hover:scale-105 bg-transparent"
+                className="transition-all duration-300 hover:scale-105 bg-transparent w-full sm:w-auto"
               >
                 <Download className="w-4 h-4 mr-2" />
                 Download Resume
@@ -101,28 +109,48 @@ export function HeroAboutSection() {
             </div>
 
             {/* Contact Links */}
-            <div className="flex gap-6 pt-4">
-              <Button variant="ghost" size="sm" asChild className="transition-all duration-300 hover:scale-105">
+            <div className="grid grid-cols-2 sm:flex gap-2 sm:gap-4 pt-4">
+              <Button
+                variant="ghost"
+                size="sm"
+                asChild
+                className="transition-all duration-300 hover:scale-105 text-xs sm:text-sm"
+              >
                 <a href="https://github.com/ivanrbnc" target="_blank" rel="noopener noreferrer">
-                  <Github className="w-4 h-4 mr-2" />
+                  <Github className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
                   GitHub
                 </a>
               </Button>
-              <Button variant="ghost" size="sm" asChild className="transition-all duration-300 hover:scale-105">
+              <Button
+                variant="ghost"
+                size="sm"
+                asChild
+                className="transition-all duration-300 hover:scale-105 text-xs sm:text-sm"
+              >
                 <a href="https://linkedin.com/in/ivan-cezeliano" target="_blank" rel="noopener noreferrer">
-                  <Linkedin className="w-4 h-4 mr-2" />
+                  <Linkedin className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
                   LinkedIn
                 </a>
               </Button>
-              <Button variant="ghost" size="sm" asChild className="transition-all duration-300 hover:scale-105">
+              <Button
+                variant="ghost"
+                size="sm"
+                asChild
+                className="transition-all duration-300 hover:scale-105 text-xs sm:text-sm"
+              >
                 <a href="https://www.instagram.com/ivanrbnc/" target="_blank" rel="noopener noreferrer">
-                  <Instagram className="w-4 h-4 mr-2" />
+                  <Instagram className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
                   Instagram
                 </a>
               </Button>
-              <Button variant="ghost" size="sm" asChild className="transition-all duration-300 hover:scale-105">
+              <Button
+                variant="ghost"
+                size="sm"
+                asChild
+                className="transition-all duration-300 hover:scale-105 text-xs sm:text-sm"
+              >
                 <a href="mailto:ivanrbnc@gmail.com">
-                  <Mail className="w-4 h-4 mr-2" />
+                  <Mail className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
                   Contact
                 </a>
               </Button>
@@ -130,14 +158,16 @@ export function HeroAboutSection() {
           </div>
 
           {/* Right Side - About Me Stats */}
-          <div className="space-y-8">
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-slate-100">
-              <h3 className="text-3xl font-bold text-center text-slate-800 mb-8">About Me</h3>
+          <div className="space-y-6 lg:space-y-8 mt-8 lg:mt-0">
+            <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-lg border border-slate-100">
+              <h3 className="text-2xl lg:text-3xl font-bold text-center text-slate-800 mb-6 lg:mb-8">About Me</h3>
 
-              <div className="space-y-6 text-slate-600 leading-relaxed">
+              <div className="space-y-4 lg:space-y-6 text-slate-600 leading-relaxed text-sm lg:text-base">
                 <p>
-                  I&apos;m a fresh graduate with a degree in <strong>Information Systems</strong> from Universitas Indonesia.
-                  My passion lies at the intersection of data and software, with a keen interest in{" "}
+                  {"I&apos;m a fresh graduate with a degree in"} <strong>Information Systems</strong>{" "}
+                  {
+                    " from Universitas Indonesia. My passion lies at the intersection of data and software, with a keen interest in"
+                  }{" "}
                   <span className="text-blue-600 font-semibold">Data Analytics</span>,{" "}
                   <span className="text-green-600 font-semibold">Data Science</span>,{" "}
                   <span className="text-purple-600 font-semibold">Software Engineering</span>, and{" "}
@@ -145,29 +175,29 @@ export function HeroAboutSection() {
                 </p>
 
                 <p>
-                  I love building innovative solutions and collaborating with others to create meaningful impact through
-                  technology. I&apos;m always eager to learn new technologies and take on challenging projects that push my
-                  boundaries.
+                  {
+                    "I love building innovative solutions and collaborating with others to create meaningful impact through technology. I&apos;m always eager to learn new technologies and take on challenging projects that push my boundaries."
+                  }
                 </p>
               </div>
 
               {/* Stats Grid */}
-              <div className="grid grid-cols-2 gap-6 mt-8">
+              <div className="grid grid-cols-2 gap-4 lg:gap-6 mt-6 lg:mt-8">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-blue-600">4+</div>
-                  <div className="text-sm text-slate-600 mt-1">Internships</div>
+                  <div className="text-2xl lg:text-4xl font-bold text-blue-600">4+</div>
+                  <div className="text-xs lg:text-sm text-slate-600 mt-1">Internships</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-green-600">10+</div>
-                  <div className="text-sm text-slate-600 mt-1">Projects Built</div>
+                  <div className="text-2xl lg:text-4xl font-bold text-green-600">10+</div>
+                  <div className="text-xs lg:text-sm text-slate-600 mt-1">Projects Built</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-purple-600">4+</div>
-                  <div className="text-sm text-slate-600 mt-1">Years of Study</div>
+                  <div className="text-2xl lg:text-4xl font-bold text-purple-600">4+</div>
+                  <div className="text-xs lg:text-sm text-slate-600 mt-1">Years of Study</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-red-600">17+</div>
-                  <div className="text-sm text-slate-600 mt-1">Technologies</div>
+                  <div className="text-2xl lg:text-4xl font-bold text-red-600">17+</div>
+                  <div className="text-xs lg:text-sm text-slate-600 mt-1">Technologies</div>
                 </div>
               </div>
             </div>
