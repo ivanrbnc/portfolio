@@ -53,7 +53,7 @@ export function ProjectsCarousel() {
   }
 
   return (
-    <section id="projects-section" className="space-y-8">
+    <section id="projects-section" className="space-y-8 mb-16">
       <h3 className="text-3xl font-bold text-center text-slate-800">Featured Projects</h3>
 
       <div className="relative">
@@ -120,7 +120,7 @@ export function ProjectsCarousel() {
         </Button>
 
         {/* Dots Indicator */}
-        <div className="flex justify-center gap-2 mt-6">
+        <div className="flex justify-center gap-2 mt-6 pb-4">
           {projects.map((_, index) => (
             <button
               key={index}
