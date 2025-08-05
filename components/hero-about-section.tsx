@@ -164,7 +164,7 @@ export function HeroAboutSection() {
 
               <div className="space-y-4 lg:space-y-6 text-slate-600 leading-relaxed text-sm lg:text-base">
                 <p>
-                  {"I&apos;m a fresh graduate with a degree in"} <strong>Information Systems</strong>{" "}
+                  {"I'm a fresh graduate with a degree in"} <strong>Information Systems</strong>{" "}
                   {
                     " from Universitas Indonesia. My passion lies at the intersection of data and software, with a keen interest in"
                   }{" "}
@@ -176,7 +176,7 @@ export function HeroAboutSection() {
 
                 <p>
                   {
-                    "I love building innovative solutions and collaborating with others to create meaningful impact through technology. I&apos;m always eager to learn new technologies and take on challenging projects that push my boundaries."
+                    "I love building innovative solutions and collaborating with others to create meaningful impact through technology. I'm always eager to learn new technologies and take on challenging projects that push my boundaries."
                   }
                 </p>
               </div>
