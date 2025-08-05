@@ -45,7 +45,7 @@ export function ExperienceSection() {
           <CardContent>
             <ul className="space-y-2 text-slate-600">
               <li>
-                • Explored Telkomsel AI agents' capabilities using stress testing up to 500 consecutive prompts and
+                • Explored Telkomsel AI agents&apos; capabilities using stress testing up to 500 consecutive prompts and
                 contributed to a 10-section prompting guideline adopted 100% by Telkomsel
               </li>
               <li>
@@ -82,7 +82,7 @@ export function ExperienceSection() {
                 polarity, reducing manual effort and boosting productivity by over 25%
               </li>
               <li>
-                • Developed an automation program leveraging data-driven insights to elevate Telkomsel's market
+                • Developed an automation program leveraging data-driven insights to elevate Telkomsel&apos;s market
                 visibility among key stakeholders by over 10%
               </li>
             </ul>

@@ -77,7 +77,7 @@ export function HeroAboutSection() {
           {/* Left Side - Hero Text */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-7xl font-bold text-slate-800">Hello, I'm</h1>
+              <h1 className="text-5xl md:text-7xl font-bold text-slate-800">Hello, I&apos;m</h1>
               <h2 className="text-5xl md:text-7xl font-bold text-slate-800">Ivan Rabbani,</h2>
               <div className="text-3xl md:text-4xl font-bold text-red-500 h-16 flex items-center">
                 <span className="border-r-2 border-red-500 pr-1 animate-pulse">{displayText}</span>
@@ -136,7 +136,7 @@ export function HeroAboutSection() {
 
               <div className="space-y-6 text-slate-600 leading-relaxed">
                 <p>
-                  I'm a fresh graduate with a degree in <strong>Information Systems</strong> from Universitas Indonesia.
+                  I&apos;m a fresh graduate with a degree in <strong>Information Systems</strong> from Universitas Indonesia.
                   My passion lies at the intersection of data and software, with a keen interest in{" "}
                   <span className="text-blue-600 font-semibold">Data Analytics</span>,{" "}
                   <span className="text-green-600 font-semibold">Data Science</span>,{" "}
@@ -146,7 +146,7 @@ export function HeroAboutSection() {
 
                 <p>
                   I love building innovative solutions and collaborating with others to create meaningful impact through
-                  technology. I'm always eager to learn new technologies and take on challenging projects that push my
+                  technology. I&apos;m always eager to learn new technologies and take on challenging projects that push my
                   boundaries.
                 </p>
               </div>

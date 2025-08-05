@@ -1,5 +1,8 @@
 "use client"
 
+import Image from "next/image"
+
+
 const skills = [
   // Row 1 - 9 items scrolling left (Backend & Data focused)
   { name: "Python", icon: "python.png" },
@@ -40,7 +43,13 @@ export function SkillsSection() {
               <div key={`row1-first-${index}`} className="flex-shrink-0 mx-4">
                 <div className="skill-item group">
                   <div className="w-16 h-16 bg-white rounded-xl shadow-md p-3 hover:shadow-xl transition-all duration-300 hover:scale-110 border border-slate-100">
-                    <img src={`/images/${skill.icon}`} alt={skill.name} className="w-full h-full object-contain" />
+                    <Image
+                      src={`/images/${skill.icon}`}
+                      alt={skill.name}
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                   <p className="text-xs text-center mt-2 text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity font-medium">
                     {skill.name}
@@ -53,7 +62,13 @@ export function SkillsSection() {
               <div key={`row1-second-${index}`} className="flex-shrink-0 mx-4">
                 <div className="skill-item group">
                   <div className="w-16 h-16 bg-white rounded-xl shadow-md p-3 hover:shadow-xl transition-all duration-300 hover:scale-110 border border-slate-100">
-                    <img src={`/images/${skill.icon}`} alt={skill.name} className="w-full h-full object-contain" />
+                    <Image
+                      src={`/images/${skill.icon}`}
+                      alt={skill.name}
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                   <p className="text-xs text-center mt-2 text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity font-medium">
                     {skill.name}
@@ -72,7 +87,13 @@ export function SkillsSection() {
               <div key={`row2-first-${index}`} className="flex-shrink-0 mx-4">
                 <div className="skill-item group">
                   <div className="w-16 h-16 bg-white rounded-xl shadow-md p-3 hover:shadow-xl transition-all duration-300 hover:scale-110 border border-slate-100">
-                    <img src={`/images/${skill.icon}`} alt={skill.name} className="w-full h-full object-contain" />
+                    <Image
+                      src={`/images/${skill.icon}`}
+                      alt={skill.name}
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                   <p className="text-xs text-center mt-2 text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity font-medium">
                     {skill.name}
@@ -85,7 +106,13 @@ export function SkillsSection() {
               <div key={`row2-second-${index}`} className="flex-shrink-0 mx-4">
                 <div className="skill-item group">
                   <div className="w-16 h-16 bg-white rounded-xl shadow-md p-3 hover:shadow-xl transition-all duration-300 hover:scale-110 border border-slate-100">
-                    <img src={`/images/${skill.icon}`} alt={skill.name} className="w-full h-full object-contain" />
+                    <Image
+                      src={`/images/${skill.icon}`}
+                      alt={skill.name}
+                      width={64}
+                      height={64}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                   <p className="text-xs text-center mt-2 text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity font-medium">
                     {skill.name}
