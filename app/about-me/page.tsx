@@ -133,7 +133,8 @@ export default function AboutMePage() {
                     Building something awesome! 🚀
                   </p>
                   <p className="text-gray-500 max-w-lg mx-auto">
-                    This page is currently being crafted with care. Check back soon to see what&apos;s cooking!
+                    This page is currently being crafted with care. <br></br>
+                    Check back soon to see what&apos;s cooking!
                   </p>
                   <div className="pt-4">
                     <ProgressBar />
