@@ -2,7 +2,7 @@ import { Header } from "@/components/header"
 import { HeroAboutSection } from "@/components/hero-about-section"
 import { SkillsSection } from "@/components/skills-section"
 import { ExperienceSection } from "@/components/experience-section"
-import { ProjectsCarousel } from "@/components/projects-carousel"
+import { ProjectsGrid } from "@/components/projects-grid"
 import { Footer } from "@/components/footer"
 
 export default function Portfolio() {
@@ -12,10 +12,10 @@ export default function Portfolio() {
 
       <main className="space-y-16">
         <HeroAboutSection />
-        <div className="max-w-4xl mx-auto px-6 space-y-16">
+        <div className="max-w-6xl mx-auto px-6 space-y-16">
           <SkillsSection />
           <ExperienceSection />
-          <ProjectsCarousel />
+          <ProjectsGrid />
         </div>
       </main>
 

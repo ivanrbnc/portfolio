@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail, Download, Instagram } from "lucide-react"
+import { Github, Linkedin, Mail, Download, Instagram } from 'lucide-react'
 
 const dynamicTexts = [
   "I build projects.",
@@ -81,7 +81,7 @@ export function HeroAboutSection() {
                 Hello, I&apos;m
               </h1>
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-slate-800 leading-tight">
-                Ivan Rabbani,
+                Ivan Rabbani Cezeliano,
               </h2>
               <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-red-500 h-12 sm:h-14 md:h-16 flex items-center">
                 <span className="border-r-2 border-red-500 pr-1 animate-pulse">{displayText}</span>
@@ -108,13 +108,13 @@ export function HeroAboutSection() {
               </Button>
             </div>
 
-            {/* Contact Links */}
+            {/* Contact Links - Fixed 2x2 grid alignment */}
             <div className="grid grid-cols-2 sm:flex gap-2 sm:gap-4 pt-4">
               <Button
                 variant="ghost"
                 size="sm"
                 asChild
-                className="transition-all duration-300 hover:scale-105 text-xs sm:text-sm"
+                className="transition-all duration-300 hover:scale-105 text-xs sm:text-sm justify-start"
               >
                 <a href="https://github.com/ivanrbnc" target="_blank" rel="noopener noreferrer">
                   <Github className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
@@ -125,7 +125,7 @@ export function HeroAboutSection() {
                 variant="ghost"
                 size="sm"
                 asChild
-                className="transition-all duration-300 hover:scale-105 text-xs sm:text-sm"
+                className="transition-all duration-300 hover:scale-105 text-xs sm:text-sm justify-start"
               >
                 <a href="https://linkedin.com/in/ivan-cezeliano" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
@@ -136,7 +136,7 @@ export function HeroAboutSection() {
                 variant="ghost"
                 size="sm"
                 asChild
-                className="transition-all duration-300 hover:scale-105 text-xs sm:text-sm"
+                className="transition-all duration-300 hover:scale-105 text-xs sm:text-sm justify-start"
               >
                 <a href="https://www.instagram.com/ivanrbnc/" target="_blank" rel="noopener noreferrer">
                   <Instagram className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
@@ -147,7 +147,7 @@ export function HeroAboutSection() {
                 variant="ghost"
                 size="sm"
                 asChild
-                className="transition-all duration-300 hover:scale-105 text-xs sm:text-sm"
+                className="transition-all duration-300 hover:scale-105 text-xs sm:text-sm justify-start"
               >
                 <a href="mailto:ivanrbnc@gmail.com">
                   <Mail className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
