@@ -2,15 +2,15 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail, Download, Instagram } from 'lucide-react'
+import { ContactLinks } from "@/components/contact-links"
+import { Download } from 'lucide-react'
 
 const dynamicTexts = [
   "I build projects.",
   "Software Engineer",
-  "Artificial Intelligence Enthusiast",
+  "AI Enthusiast",
   "Data Science Specialist",
   "Full-Stack Developer",
-  "Problem Solver",
   "Innovation Driver",
 ]
 
@@ -77,10 +77,10 @@ export function HeroAboutSection() {
           {/* Left Side - Hero Text */}
           <div className="space-y-6 lg:space-y-8">
             <div className="space-y-2 lg:space-y-4">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-slate-800 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-slate-800 leading-tight mb-0">
                 Hello, I&apos;m
               </h1>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-slate-800 leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-slate-800 leading-tight mt-0">
                 Ivan Rabbani Cezeliano,
               </h2>
               <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-red-500 h-12 sm:h-14 md:h-16 flex items-center">
@@ -108,53 +108,7 @@ export function HeroAboutSection() {
               </Button>
             </div>
 
-            {/* Contact Links - Fixed 2x2 grid alignment */}
-            <div className="grid grid-cols-2 sm:flex gap-2 sm:gap-4 pt-4">
-              <Button
-                variant="ghost"
-                size="sm"
-                asChild
-                className="transition-all duration-300 hover:scale-105 text-xs sm:text-sm justify-start"
-              >
-                <a href="https://github.com/ivanrbnc" target="_blank" rel="noopener noreferrer">
-                  <Github className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-                  GitHub
-                </a>
-              </Button>
-              <Button
-                variant="ghost"
-                size="sm"
-                asChild
-                className="transition-all duration-300 hover:scale-105 text-xs sm:text-sm justify-start"
-              >
-                <a href="https://linkedin.com/in/ivan-cezeliano" target="_blank" rel="noopener noreferrer">
-                  <Linkedin className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-                  LinkedIn
-                </a>
-              </Button>
-              <Button
-                variant="ghost"
-                size="sm"
-                asChild
-                className="transition-all duration-300 hover:scale-105 text-xs sm:text-sm justify-start"
-              >
-                <a href="https://www.instagram.com/ivanrbnc/" target="_blank" rel="noopener noreferrer">
-                  <Instagram className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-                  Instagram
-                </a>
-              </Button>
-              <Button
-                variant="ghost"
-                size="sm"
-                asChild
-                className="transition-all duration-300 hover:scale-105 text-xs sm:text-sm justify-start"
-              >
-                <a href="mailto:ivanrbnc@gmail.com">
-                  <Mail className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-                  Contact
-                </a>
-              </Button>
-            </div>
+            <ContactLinks />
           </div>
 
           {/* Right Side - About Me Stats */}
@@ -171,7 +125,7 @@ export function HeroAboutSection() {
                   <span className="text-blue-600 font-semibold">Data Analytics</span>,{" "}
                   <span className="text-green-600 font-semibold">Data Science</span>,{" "}
                   <span className="text-purple-600 font-semibold">Software Engineering</span>, and{" "}
-                  <span className="text-red-600 font-semibold">AI</span>.
+                  <span className="text-red-600 font-semibold">Artificial Intelligence</span>.
                 </p>
 
                 <p>
@@ -184,19 +138,19 @@ export function HeroAboutSection() {
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-4 lg:gap-6 mt-6 lg:mt-8">
                 <div className="text-center">
-                  <div className="text-2xl lg:text-4xl font-bold text-blue-600">4+</div>
+                  <div className="text-2xl lg:text-4xl font-bold text-slate-800">4+</div>
                   <div className="text-xs lg:text-sm text-slate-600 mt-1">Internships</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl lg:text-4xl font-bold text-green-600">10+</div>
+                  <div className="text-2xl lg:text-4xl font-bold text-slate-800">10+</div>
                   <div className="text-xs lg:text-sm text-slate-600 mt-1">Projects Built</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl lg:text-4xl font-bold text-purple-600">4+</div>
+                  <div className="text-2xl lg:text-4xl font-bold text-slate-800">4+</div>
                   <div className="text-xs lg:text-sm text-slate-600 mt-1">Years of Study</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl lg:text-4xl font-bold text-red-600">17+</div>
+                  <div className="text-2xl lg:text-4xl font-bold text-slate-800">17+</div>
                   <div className="text-xs lg:text-sm text-slate-600 mt-1">Technologies</div>
                 </div>
               </div>

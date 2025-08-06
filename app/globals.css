@@ -152,8 +152,3 @@
   animation: scroll-right 25s linear infinite;
   width: fit-content;
 }
-
-.skills-container:hover .animate-scroll-left,
-.skills-container:hover .animate-scroll-right {
-  animation-play-state: paused;
-}

@@ -4,7 +4,7 @@ import Image from "next/image"
 
 
 const skills = [
-  // Row 1 - 9 items scrolling left (Backend & Data focused)
+  // Row 1 - items scrolling left (Backend & Data focused)
   { name: "Python", icon: "python.png" },
   { name: "Java", icon: "java.png" },
   { name: "Django", icon: "django.png" },
@@ -15,9 +15,12 @@ const skills = [
   { name: "Tableau", icon: "tableau.png" },
   { name: "Go", icon: "go.png" },
 
-  // Row 2 - 8 items scrolling right (Frontend & Tools focused)
+  // Row 2 - items scrolling right (Frontend & Tools focused)
   { name: "React", icon: "react.png" },
   { name: "Next.js", icon: "next.png" },
+  { name: "HTML", icon: "html.png" },
+  { name: "CSS", icon: "css.png" },
+  { name: "Javascript", icon: "javascript.png" },
   { name: "Flutter", icon: "flutter.png" },
   { name: "Dart", icon: "dart.png" },
   { name: "Figma", icon: "figma.png" },
@@ -31,10 +34,10 @@ const row2Skills = skills.slice(9, 17)
 
 export function SkillsSection() {
   return (
-    <section className="space-y-8 overflow-hidden">
+    <section className="space-y-8 overflow-hidden skills-section">
       <h3 className="text-3xl font-bold text-center text-slate-800">Skills & Technologies</h3>
 
-      <div className="skills-container space-y-8">
+      <div className="space-y-8">
         {/* Row 1: Scrolling Left */}
         <div className="relative overflow-hidden">
           <div className="flex animate-scroll-left" style={{ width: 'max-content' }}>
@@ -113,11 +116,6 @@ export function SkillsSection() {
   .animate-scroll-right {
     animation: scroll-right 35s linear infinite;
     width: max-content !important;
-  }
-
-  .skills-container:hover .animate-scroll-left,
-  .skills-container:hover .animate-scroll-right {
-    animation-play-state: paused;
   }
 `}</style>
     </section>
