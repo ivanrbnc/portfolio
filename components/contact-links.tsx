@@ -1,4 +1,3 @@
-// components/contact-links.tsx
 "use client"
 
 import { Github, Linkedin, Mail, Instagram } from 'lucide-react'

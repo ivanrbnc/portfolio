@@ -17,7 +17,7 @@ export function ExperienceItem({ position, company, date, description }: Experie
       {/* Card Content */}
       <Card className="ml-16 flex-1">
         <CardHeader>
-          <div className="flex justify-between items-start">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
             <div>
               <CardTitle>{position}</CardTitle>
               <CardDescription className="text-base">{company}</CardDescription>

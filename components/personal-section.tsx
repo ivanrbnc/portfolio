@@ -1,7 +1,6 @@
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { User, ArrowRight } from "lucide-react"
-import Link from "next/link"
+import { User } from "lucide-react"
+import { ContactLinks } from "./contact-links"
 
 export function PersonalSection() {
   return (
@@ -19,20 +18,13 @@ export function PersonalSection() {
           </h3>
           
           <p className="text-slate-600 mb-6 max-w-2xl mx-auto leading-relaxed">
-            Discover my hobbies, interests, personality, and what drives me beyond professional work.<br/>
-            Get to know the person behind the code and projects.
+            Feel free to reach out anytime, whether you&apos;re sharing an opportunity or simply saying hello, I&apos;ll make sure to respond. See you later!
           </p>
           
-          <Button 
-            asChild 
-            size="lg" 
-            className="bg-slate-800 hover:bg-slate-900 text-white transition-all duration-300 hover:scale-105"
-          >
-            <Link href="/about-me" className="flex items-center gap-2">
-              Explore My Personal Side
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </Button>
+          <div className="flex justify-center text-slate-600 mb-6">
+            <ContactLinks />
+          </div>
+
         </CardContent>
       </Card>
     </section>

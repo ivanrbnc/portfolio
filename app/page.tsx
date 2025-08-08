@@ -2,7 +2,7 @@ import { Header } from "@/components/header"
 import { HeroAboutSection } from "@/components/hero-about-section"
 import { SkillsSection } from "@/components/skills-section"
 import { ExperienceSection } from "@/components/experience-section"
-import { ProjectsGrid } from "@/components/projects-grid"
+import { ProjectsGrid } from "@/components/projects-section"
 import { PersonalSection } from "@/components/personal-section"
 import { Footer } from "@/components/footer"
 

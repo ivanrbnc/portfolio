@@ -2,7 +2,6 @@
 
 import Image from "next/image"
 
-
 const skills = [
   // Row 1 - items scrolling left (Backend & Data focused)
   { name: "Python", icon: "python.png" },

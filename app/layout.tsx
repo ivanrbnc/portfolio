@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Ivan Cezeliano",
-  description: "Built with Next and Tailwind",
+  description: "Ivan's Portfolio",
   icons: {
     icon: "/favicon.jpg",
   },

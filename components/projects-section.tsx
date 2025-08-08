@@ -1,11 +1,9 @@
 "use client"
 
-import Image from "next/image"
 import { useState } from "react"
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Github, ExternalLink } from "lucide-react"
+import { ChevronDown } from "lucide-react"
+import { ProjectItem } from "./project-item"
 
 const allProjects = [
   {
@@ -45,7 +43,7 @@ const allProjects = [
     technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
     image: "/projects/portfolio.png",
     links: {
-      demo: "https://portfolio-seven-brown-24.vercel.app/",
+      demo: "https://ivanrbnc.xyz",
       github: "https://github.com/ivanrbnc/portfolio",
     },
   },
@@ -99,73 +97,15 @@ export function ProjectsGrid() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {allProjects.slice(0, visibleProjects).map((project, index) => (
-          <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:scale-105 flex flex-col h-full">
-            <CardHeader className="flex-shrink-0">
-              <div className="flex justify-between items-start gap-2">
-                <CardTitle className="group-hover:text-blue-600 transition-colors text-lg flex-1 min-w-0">
-                  {project.title}
-                </CardTitle>
-                <div className="flex gap-1 flex-shrink-0">
-                  {project.links.github && (
-                    <Button variant="ghost" size="sm" asChild className="p-2">
-                      <a href={project.links.github} target="_blank" rel="noopener noreferrer" title="GitHub Repository">
-                        <Github className="w-4 h-4" />
-                      </a>
-                    </Button>
-                  )}
-                  {project.links.githubWeb && project.links.githubMobile && (
-                    <>
-                      <Button variant="ghost" size="sm" asChild className="p-2">
-                        <a href={project.links.githubWeb} target="_blank" rel="noopener noreferrer" title="Web Repository">
-                          <Github className="w-4 h-4" />
-                        </a>
-                      </Button>
-                      <Button variant="ghost" size="sm" asChild className="p-2">
-                        <a href={project.links.githubMobile} target="_blank" rel="noopener noreferrer" title="Mobile Repository">
-                          <Github className="w-4 h-4" />
-                        </a>
-                      </Button>
-                    </>
-                  )}
-                  {project.links.demo && (
-                    <Button variant="ghost" size="sm" asChild className="p-2">
-                      <a href={project.links.demo} target="_blank" rel="noopener noreferrer" title="Live Demo">
-                        <ExternalLink className="w-4 h-4" />
-                      </a>
-                    </Button>
-                  )}
-                </div>
-              </div>
-              <div className="border-b border-slate-200 mt-3"></div>
-              <CardDescription className="text-left text-sm mt-2">{project.description}</CardDescription>
-            </CardHeader>
-            <CardContent className="flex-1 flex flex-col">
-              <div className="space-y-4 flex-1">
-                <div className="aspect-video relative rounded-lg overflow-hidden bg-slate-100">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {project.technologies.map((tech) => (
-                    <Badge key={tech} variant="outline" className="text-xs">
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+          <ProjectItem key={index} project={project} />
         ))}
       </div>
 
       <div className="flex justify-center gap-4">
         {visibleProjects < allProjects.length && (
-          <Button onClick={showMoreProjects} variant="outline" className="transition-all duration-300 hover:scale-105">
-            See More Projects
+          <Button onClick={showMoreProjects} variant="outline" className="transition-all duration-300 hover:scale-105 flex items-center gap-2">
+            <ChevronDown className="w-4 h-4" />
+            Show More
           </Button>
         )}
         {visibleProjects > 3 && (
