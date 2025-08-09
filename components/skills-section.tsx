@@ -34,7 +34,7 @@ const row2Skills = skills.slice(9, 17)
 export function SkillsSection() {
   return (
     <section className="space-y-8 overflow-hidden skills-section">
-      <h3 className="text-3xl font-bold text-center text-slate-800">Skills & Technologies</h3>
+      <h3 className="text-3xl font-bold text-center text-slate-800 dark:text-slate-100">Skills & Technologies</h3>
 
       <div className="space-y-8">
         {/* Row 1: Scrolling Left */}
@@ -44,7 +44,7 @@ export function SkillsSection() {
             {[...row1Skills, ...row1Skills, ...row1Skills].map((skill, index) => (
               <div key={`row1-${index}`} className="flex-shrink-0 mx-4">
                 <div className="skill-item group">
-                  <div className="w-16 h-16 bg-white rounded-xl shadow-md p-3 hover:shadow-xl transition-all duration-300 hover:scale-110 border border-slate-100">
+                  <div className="w-16 h-16 bg-white dark:bg-slate-800 rounded-xl shadow-md p-3 hover:shadow-xl transition-all duration-300 hover:scale-110 border border-slate-100 dark:border-slate-700">
                     <Image
                       src={`/images/${skill.icon}`}
                       alt={skill.name}
@@ -53,7 +53,7 @@ export function SkillsSection() {
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <p className="text-xs text-center mt-2 text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity font-medium">
+                  <p className="text-xs text-center mt-2 text-slate-600 dark:text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity font-medium">
                     {skill.name}
                   </p>
                 </div>
@@ -69,7 +69,7 @@ export function SkillsSection() {
             {[...row2Skills, ...row2Skills, ...row2Skills].map((skill, index) => (
               <div key={`row2-${index}`} className="flex-shrink-0 mx-4">
                 <div className="skill-item group">
-                  <div className="w-16 h-16 bg-white rounded-xl shadow-md p-3 hover:shadow-xl transition-all duration-300 hover:scale-110 border border-slate-100">
+                  <div className="w-16 h-16 bg-white dark:bg-slate-800 rounded-xl shadow-md p-3 hover:shadow-xl transition-all duration-300 hover:scale-110 border border-slate-100 dark:border-slate-700">
                     <Image
                       src={`/images/${skill.icon}`}
                       alt={skill.name}
@@ -78,7 +78,7 @@ export function SkillsSection() {
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <p className="text-xs text-center mt-2 text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity font-medium">
+                  <p className="text-xs text-center mt-2 text-slate-600 dark:text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity font-medium">
                     {skill.name}
                   </p>
                 </div>

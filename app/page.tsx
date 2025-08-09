@@ -8,7 +8,7 @@ import { Footer } from "@/components/footer"
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 transition-colors duration-300">
       <Header />
 
       <main className="space-y-16 pb-10">
