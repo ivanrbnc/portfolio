@@ -78,13 +78,13 @@ export function HeroAboutSection() {
           <div className="space-y-6 lg:space-y-8">
             <div className="space-y-2 lg:space-y-4">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-slate-800 leading-tight mb-0">
-                Hello, I&apos;m
+                <span className="dark:text-slate-100">Hello, I&apos;m</span>
               </h1>
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-slate-800 leading-tight mt-0">
-                Ivan Rabbani Cezeliano,
+                <span className="dark:text-slate-100">Ivan Rabbani Cezeliano,</span>
               </h2>
               <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-red-500 h-12 sm:h-14 md:h-16 flex items-center">
-                <span className="border-r-2 border-red-500 pr-1 animate-pulse">{displayText}</span>
+                <span className="border-r-2 border-red-500 pr-1 animate-pulse dark:text-red-400">{displayText}</span>
               </div>
             </div>
 
@@ -113,10 +113,10 @@ export function HeroAboutSection() {
 
           {/* Right Side - About Me Stats */}
           <div className="space-y-6 lg:space-y-8 mt-8 lg:mt-0">
-            <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-lg border border-slate-100">
-              <h3 className="text-2xl lg:text-3xl font-bold text-center text-slate-800 mb-6 lg:mb-8">About Me</h3>
+            <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 lg:p-8 shadow-lg border border-slate-100 dark:border-slate-700 transition-colors duration-300">
+              <h3 className="text-2xl lg:text-3xl font-bold text-center text-slate-800 dark:text-slate-100 mb-6 lg:mb-8">About Me</h3>
 
-              <div className="space-y-4 lg:space-y-6 text-slate-600 leading-relaxed text-sm lg:text-base">
+              <div className="space-y-4 lg:space-y-6 text-slate-600 dark:text-slate-300 leading-relaxed text-sm lg:text-base">
                 <p>
                   {"I'm a fresh graduate with a degree in"} <strong>Information Systems</strong>{" "}
                   {
@@ -138,20 +138,20 @@ export function HeroAboutSection() {
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-4 lg:gap-6 mt-6 lg:mt-8">
                 <div className="text-center">
-                  <div className="text-2xl lg:text-4xl font-bold text-slate-800">4+</div>
-                  <div className="text-xs lg:text-sm text-slate-600 mt-1">Internships</div>
+                  <div className="text-2xl lg:text-4xl font-bold text-slate-800 dark:text-slate-100">4+</div>
+                  <div className="text-xs lg:text-sm text-slate-600 dark:text-slate-400 mt-1">Internships</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl lg:text-4xl font-bold text-slate-800">10+</div>
-                  <div className="text-xs lg:text-sm text-slate-600 mt-1">Projects Built</div>
+                  <div className="text-2xl lg:text-4xl font-bold text-slate-800 dark:text-slate-100">10+</div>
+                  <div className="text-xs lg:text-sm text-slate-600 dark:text-slate-400 mt-1">Projects Built</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl lg:text-4xl font-bold text-slate-800">4+</div>
-                  <div className="text-xs lg:text-sm text-slate-600 mt-1">Years of Study</div>
+                  <div className="text-2xl lg:text-4xl font-bold text-slate-800 dark:text-slate-100">4+</div>
+                  <div className="text-xs lg:text-sm text-slate-600 dark:text-slate-400 mt-1">Years of Study</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl lg:text-4xl font-bold text-slate-800">17+</div>
-                  <div className="text-xs lg:text-sm text-slate-600 mt-1">Technologies</div>
+                  <div className="text-2xl lg:text-4xl font-bold text-slate-800 dark:text-slate-100">17+</div>
+                  <div className="text-xs lg:text-sm text-slate-600 dark:text-slate-400 mt-1">Technologies</div>
                 </div>
               </div>
             </div>

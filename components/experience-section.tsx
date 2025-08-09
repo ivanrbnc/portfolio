@@ -3,9 +3,9 @@ import { ExperienceItem } from "./experience-item";
 export function ExperienceSection() {
   return (
     <section className="space-y-8">
-      <h3 className="text-3xl font-bold text-center text-slate-800">Work Experience</h3>
+      <h3 className="text-3xl font-bold text-center text-slate-800 dark:text-slate-100">Work Experience</h3>
       <div className="relative">
-        <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-slate-300" />
+        <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-slate-300 dark:bg-slate-600" />
         <div className="space-y-8">
           <ExperienceItem
             position="Solution Engineer Intern"

@@ -93,7 +93,7 @@ export function ProjectsGrid() {
 
   return (
     <section id="projects-section" className="space-y-8 mb-8">
-      <h3 className="text-3xl font-bold text-center text-slate-800">Projects</h3>
+      <h3 className="text-3xl font-bold text-center text-slate-800 dark:text-slate-100">Projects</h3>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {allProjects.slice(0, visibleProjects).map((project, index) => (
