@@ -25,7 +25,6 @@ export function ExperienceItem({ position, company, date, description }: Experie
             <Badge variant="outline">{date}</Badge>
           </div>
           <div className="border-b border-slate-200 mt-3"></div>
-          <div className="border-b border-slate-200 dark:border-slate-600 mt-3"></div>
         </CardHeader>
         <CardContent>
           <ul className="space-y-2 text-slate-600 dark:text-slate-300 list-disc list-outside pl-5">

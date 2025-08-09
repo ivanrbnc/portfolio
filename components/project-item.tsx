@@ -61,7 +61,6 @@ export function ProjectItem({ project }: ProjectItemProps) {
           </div>
         </div>
         <div className="border-b border-slate-200 mt-3"></div>
-        <div className="border-b border-slate-200 dark:border-slate-600 mt-3"></div>
         <CardDescription className="text-left text-sm mt-2 dark:text-slate-300">{project.description}</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 flex flex-col">
