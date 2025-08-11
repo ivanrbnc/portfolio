@@ -89,34 +89,34 @@ export function SkillsSection() {
       </div>
 
       <style jsx>{`
-  @keyframes scroll-left {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-33.333%);
-    }
-  }
+        @keyframes scroll-left {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-33.333%);
+          }
+        }
 
-  @keyframes scroll-right {
-    0% {
-      transform: translateX(-33.333%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
+        @keyframes scroll-right {
+          0% {
+            transform: translateX(-33.333%);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
 
-  .animate-scroll-left {
-    animation: scroll-left 30s linear infinite;
-    width: max-content !important;
-  }
+        .animate-scroll-left {
+          animation: scroll-left 30s linear infinite;
+          width: max-content !important;
+        }
 
-  .animate-scroll-right {
-    animation: scroll-right 35s linear infinite;
-    width: max-content !important;
-  }
-`}</style>
+        .animate-scroll-right {
+          animation: scroll-right 35s linear infinite;
+          width: max-content !important;
+        }
+      `}</style>
     </section>
   )
 }
