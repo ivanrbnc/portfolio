@@ -58,6 +58,16 @@ const allProjects = [
     },
   },
   {
+    title: "Cultour",
+    description:
+      "Cultural immersion app prototype that educates users on global cultures through virtual exploration, cultural atlases, and interactive visualizations.",
+    technologies: ["Prototype", "Figma"],
+    image: "/projects/cultour.png",
+    links: {
+      demo: "https://www.figma.com/proto/tCyMxHEZ4aJSM8WttIsZpb/Cultour-Prototype--VYN-?node-id=190-1226&p=f&t=Eh2II78sf0GdkCDP-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=190%3A1226",
+    },
+  },
+  {
     title: "Phantom Striker - Game Development",
     description:
       "2D action game built with Godot featuring platform mechanics and combat systems.",
