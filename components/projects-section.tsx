@@ -1,9 +1,20 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
+import { motion, useInView } from "framer-motion"
+import type { Variants } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ChevronDown } from "lucide-react"
 import { ProjectItem } from "./project-item"
+
+const fadeInUp: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i: number = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.15, duration: 0.5, ease: "easeOut" }
+  })
+}
 
 const allProjects = [
   {
@@ -101,19 +112,48 @@ export function ProjectsGrid() {
     setVisibleProjects(3)
   }
 
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, margin: "-50px" })
+
   return (
-    <section id="projects-section" className="space-y-8 mb-8">
-      <h3 className="text-3xl font-bold text-center text-slate-800 dark:text-slate-100">Projects</h3>
+    <section id="projects-section" className="space-y-8 mb-8" ref={ref}>
+      <motion.h3
+        variants={fadeInUp}
+        custom={0}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        className="text-3xl font-bold text-center text-slate-800 dark:text-slate-100"
+      >
+        Projects
+      </motion.h3>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {allProjects.slice(0, visibleProjects).map((project, index) => (
-          <ProjectItem key={index} project={project} />
+          <motion.div
+            key={index}
+            variants={fadeInUp}
+            custom={index + 1}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+          >
+            <ProjectItem project={project} />
+          </motion.div>
         ))}
       </div>
 
-      <div className="flex justify-center gap-4">
+      <motion.div
+        variants={fadeInUp}
+        custom={visibleProjects + 1}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        className="flex justify-center gap-4"
+      >
         {visibleProjects < allProjects.length && (
-          <Button onClick={showMoreProjects} variant="outline" className="transition-all duration-300 hover:scale-105 flex items-center gap-2">
+          <Button
+            onClick={showMoreProjects}
+            variant="outline"
+            className="transition-all duration-300 hover:scale-105 flex items-center gap-2"
+          >
             <ChevronDown className="w-4 h-4" />
             Show More
           </Button>
@@ -127,7 +167,7 @@ export function ProjectsGrid() {
             Show Less
           </Button>
         )}
-      </div>
+      </motion.div>
     </section>
   )
 }

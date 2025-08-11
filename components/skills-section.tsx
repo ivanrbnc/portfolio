@@ -1,9 +1,12 @@
 "use client"
 
 import Image from "next/image"
+import { useRef } from "react"
+import { motion, useInView } from "framer-motion"
+import type { Variants } from "framer-motion"
 
 const skills = [
-  // Row 1 - items scrolling left (Backend & Data focused)
+  // Row 1 - Backend & Data focused
   { name: "Python", icon: "python.png" },
   { name: "Java", icon: "java.png" },
   { name: "Django", icon: "django.png" },
@@ -14,7 +17,7 @@ const skills = [
   { name: "Tableau", icon: "tableau.png" },
   { name: "Go", icon: "go.png" },
 
-  // Row 2 - items scrolling right (Frontend & Tools focused)
+  // Row 2 - Frontend & Tools focused
   { name: "React", icon: "react.png" },
   { name: "Next.js", icon: "next.png" },
   { name: "HTML", icon: "html.png" },
@@ -31,16 +34,42 @@ const skills = [
 const row1Skills = skills.slice(0, 9)
 const row2Skills = skills.slice(9, 17)
 
+const fadeInUp: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i: number = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.15, duration: 0.5, ease: "easeOut" }
+  })
+}
+
 export function SkillsSection() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, margin: "-50px" })
+
   return (
-    <section className="space-y-8 overflow-hidden skills-section">
-      <h3 className="text-3xl font-bold text-center text-slate-800 dark:text-slate-100">Skills & Technologies</h3>
+    <section ref={ref} className="space-y-8 overflow-hidden skills-section">
+      {/* Heading */}
+      <motion.h3
+        variants={fadeInUp}
+        custom={0}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        className="text-3xl font-bold text-center text-slate-800 dark:text-slate-100"
+      >
+        Skills & Technologies
+      </motion.h3>
 
       <div className="space-y-8">
         {/* Row 1: Scrolling Left */}
-        <div className="relative overflow-hidden">
-          <div className="flex animate-scroll-left" style={{ width: 'max-content' }}>
-            {/* First set */}
+        <motion.div
+          variants={fadeInUp}
+          custom={1}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          className="relative overflow-hidden"
+        >
+          <div className="flex animate-scroll-left" style={{ width: "max-content" }}>
             {[...row1Skills, ...row1Skills, ...row1Skills].map((skill, index) => (
               <div key={`row1-${index}`} className="flex-shrink-0 mx-4">
                 <div className="skill-item group">
@@ -60,12 +89,17 @@ export function SkillsSection() {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Row 2: Scrolling Right */}
-        <div className="relative overflow-hidden">
-          <div className="flex animate-scroll-right" style={{ width: 'max-content' }}>
-            {/* First set */}
+        <motion.div
+          variants={fadeInUp}
+          custom={2}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          className="relative overflow-hidden"
+        >
+          <div className="flex animate-scroll-right" style={{ width: "max-content" }}>
             {[...row2Skills, ...row2Skills, ...row2Skills].map((skill, index) => (
               <div key={`row2-${index}`} className="flex-shrink-0 mx-4">
                 <div className="skill-item group">
@@ -85,7 +119,7 @@ export function SkillsSection() {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <style jsx>{`
