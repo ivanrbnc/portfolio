@@ -1,19 +1,45 @@
 "use client"
 
 import { useState, useRef } from "react"
-import { motion, useInView } from "framer-motion"
+import { motion, useInView, AnimatePresence } from "framer-motion"
 import type { Variants } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { ChevronDown } from "lucide-react"
+import { ChevronDown, ChevronUp } from "lucide-react"
 import { ProjectItem } from "./project-item"
 
+// Professional animation variants
 const fadeInUp: Variants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 30 },
   visible: (i: number = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.15, duration: 0.5, ease: "easeOut" }
+    transition: { delay: i * 0.1, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }
   })
+}
+
+const slideInFromBottom: Variants = {
+  hidden: { opacity: 0, y: 40, scale: 0.95 },
+  visible: (i: number = 0) => ({
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { 
+      delay: i * 0.1, 
+      duration: 0.7, 
+      ease: [0.25, 0.46, 0.45, 0.94],
+      scale: { type: "spring", stiffness: 300, damping: 25 }
+    }
+  })
+}
+
+const staggerContainer: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2
+    }
+  }
 }
 
 const allProjects = [
@@ -103,71 +129,162 @@ const allProjects = [
 
 export function ProjectsGrid() {
   const [visibleProjects, setVisibleProjects] = useState(3)
+  const [isExpanding, setIsExpanding] = useState(false)
 
   const showMoreProjects = () => {
+    setIsExpanding(true)
     setVisibleProjects((prev) => Math.min(prev + 3, allProjects.length))
   }
 
   const showLessProjects = () => {
+    setIsExpanding(false)
     setVisibleProjects(3)
   }
 
   const ref = useRef(null)
+  const titleRef = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-50px" })
+  const isTitleInView = useInView(titleRef, { once: true, margin: "-50px" })
 
   return (
-    <section id="projects-section" className="space-y-8 mb-8" ref={ref}>
-      <motion.h3
-        variants={fadeInUp}
-        custom={0}
+    <section id="projects-section" className="space-y-8 mb-8">
+      {/* Enhanced Title Section */}
+      <motion.div
+        ref={titleRef}
+        variants={staggerContainer}
+        initial="hidden"
+        animate={isTitleInView ? "visible" : "hidden"}
+        className="text-center"
+      >
+        <motion.h3
+          className="text-3xl font-bold text-slate-800 dark:text-slate-100"
+          variants={fadeInUp}
+          custom={0}
+        >
+          Projects
+        </motion.h3>
+      </motion.div>
+
+      {/* Projects Grid */}
+      <motion.div
+        ref={ref}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        variants={staggerContainer}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
-        className="text-3xl font-bold text-center text-slate-800 dark:text-slate-100"
       >
-        Projects
-      </motion.h3>
+        <AnimatePresence mode="wait">
+          {allProjects.slice(0, visibleProjects).map((project, index) => (
+            <motion.div
+              key={`${project.title}-${index}`}
+              variants={slideInFromBottom}
+              custom={index}
+              initial="hidden"
+              animate="visible"
+              exit={{ 
+                opacity: 0, 
+                y: -20, 
+                scale: 0.95,
+                transition: { duration: 0.3 }
+              }}
+              layout
+              whileHover={{ 
+                y: -5,
+                transition: { type: "spring", stiffness: 300, damping: 25 }
+              }}
+            >
+              <ProjectItem project={project} />
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {allProjects.slice(0, visibleProjects).map((project, index) => (
-          <motion.div
-            key={index}
-            variants={fadeInUp}
-            custom={index + 1}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-          >
-            <ProjectItem project={project} />
-          </motion.div>
-        ))}
-      </div>
-
+      {/* Enhanced Action Buttons */}
       <motion.div
         variants={fadeInUp}
-        custom={visibleProjects + 1}
+        custom={Math.ceil(visibleProjects / 3) + 1}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         className="flex justify-center gap-4"
       >
-        {visibleProjects < allProjects.length && (
-          <Button
-            onClick={showMoreProjects}
-            variant="outline"
-            className="transition-all duration-300 hover:scale-105 flex items-center gap-2"
-          >
-            <ChevronDown className="w-4 h-4" />
-            Show More
-          </Button>
-        )}
-        {visibleProjects > 3 && (
-          <Button
-            onClick={showLessProjects}
-            variant="ghost"
-            className="transition-all duration-300 hover:scale-105"
-          >
-            Show Less
-          </Button>
-        )}
+        <AnimatePresence mode="wait">
+          {visibleProjects < allProjects.length && (
+            <motion.div
+              key="show-more"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ type: "spring", stiffness: 300, damping: 25 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Button
+                onClick={showMoreProjects}
+                variant="outline"
+                className="flex items-center gap-2 border-indigo-200 dark:border-indigo-800 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 hover:border-indigo-300 dark:hover:border-indigo-700"
+              >
+                <motion.div
+                  animate={{ rotate: isExpanding ? 180 : 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <ChevronDown className="w-4 h-4" />
+                </motion.div>
+                Show More
+              </Button>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        <AnimatePresence mode="wait">
+          {visibleProjects > 3 && (
+            <motion.div
+              key="show-less"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ type: "spring", stiffness: 300, damping: 25 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Button
+                onClick={showLessProjects}
+                variant="ghost"
+                className="flex items-center gap-2 hover:bg-slate-100 dark:hover:bg-slate-800"
+              >
+                <ChevronUp className="w-4 h-4" />
+                Show Less
+              </Button>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.div>
+
+      {/* Subtle Background Elements */}
+      <motion.div
+        className="absolute top-20 right-10 w-16 h-16 bg-indigo-500/5 rounded-full blur-xl"
+        animate={{
+          scale: [1, 1.3, 1],
+          opacity: [0.3, 0.6, 0.3]
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut",
+          type: "tween"
+        }}
+      />
+      <motion.div
+        className="absolute bottom-20 left-10 w-20 h-20 bg-purple-500/5 rounded-full blur-xl"
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.2, 0.5, 0.2]
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: "easeInOut",
+          type: "tween",
+          delay: 3
+        }}
+      />
     </section>
   )
 }

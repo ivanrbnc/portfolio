@@ -37,9 +37,38 @@ export function PersonalSection() {
               animate={isInView ? "visible" : "hidden"}
               className="flex justify-center mb-6"
             >
-              <div className="w-16 h-16 bg-gray-100 dark:bg-slate-600 rounded-full flex items-center justify-center">
-                <User className="w-8 h-8 text-gray-600 dark:text-slate-300" />
-              </div>
+              <motion.div 
+                className="w-16 h-16 bg-gray-100 dark:bg-slate-600 rounded-full flex items-center justify-center"
+                whileHover={{ 
+                  scale: 1.1,
+                  rotate: 5,
+                  transition: { type: "spring", stiffness: 300, damping: 25 }
+                }}
+                whileTap={{ scale: 0.95 }}
+                animate={{
+                  y: [0, -3, 0],
+                }}
+                transition={{
+                  y: {
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }
+                }}
+              >
+                <motion.div
+                  animate={{ 
+                    rotate: [0, 10, -10, 0]
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                >
+                  <User className="w-8 h-8 text-gray-600 dark:text-slate-300" />
+                </motion.div>
+              </motion.div>
             </motion.div>
 
             <motion.h3
