@@ -67,7 +67,7 @@ const allProjects = [
     title: "SIWADI - Warehouse Information System",
     description:
       "Warehouse management system for paint distributors.",
-    technologies: ["System Analysis", "Next.js", "React", "Java","Spring Boot", "API", "Tailwind CSS", "Typescript"],
+    technologies: ["System Analysis", "Next.js", "React", "Java", "Spring Boot", "API", "Tailwind CSS", "Typescript"],
     image: "/projects/siwadi.png",
     links: {
       demo: "https://www.youtube.com/watch?v=Np6-LmrMsLo",
@@ -95,6 +95,16 @@ const allProjects = [
     },
   },
   {
+    title: "Dungeon Master - Discord RPG Bot",
+    description:
+      "A Discord bot for a singleplayer RPG game powered by Supabase (PostgreSQL).",
+    technologies: ["JavaScript", "Node.js", "Supabase", "PostgreSQL", "Discord.js"],
+    image: "/projects/dungeon-master.png",
+    links: {
+      github: "https://github.com/ivanrbnc/dungeon-master",
+    },
+  },
+  {
     title: "Cultour",
     description:
       "Cultural immersion app prototype that educates users on global cultures through virtual exploration, cultural atlases, and interactive visualizations.",
@@ -118,7 +128,7 @@ const allProjects = [
     title: "Fooody Buddy - Food Tracking App",
     description:
       "Nutrition and food tracking app with web and mobile platforms.",
-    technologies: ["Web Development", "Mobile App", "HTML", "CSS", "Flutter"],
+    technologies: ["Web Development", "Mobile App", "HTML", "CSS", "Flutter", "Dart"],
     image: "/projects/fooody.png",
     links: {
       githubWeb: "https://github.com/ramyanareswari/TK-A02",
@@ -133,7 +143,10 @@ export function ProjectsGrid() {
 
   const showMoreProjects = () => {
     setIsExpanding(true)
-    setVisibleProjects((prev) => Math.min(prev + 3, allProjects.length))
+    // Check if the device is likely mobile (screen width <= 768px)
+    const isMobile = window.innerWidth <= 768
+    const increment = isMobile ? 1 : 3
+    setVisibleProjects((prev) => Math.min(prev + increment, allProjects.length))
   }
 
   const showLessProjects = () => {
@@ -223,8 +236,8 @@ export function ProjectsGrid() {
                 className="flex items-center gap-2 border-indigo-200 dark:border-indigo-800 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 hover:border-indigo-300 dark:hover:border-indigo-700"
               >
                 <motion.div
-                  animate={{ rotate: isExpanding ? 180 : 0 }}
-                  transition={{ duration: 0.3 }}
+                  whileTap={{ rotate: 90, scale: 0.9 }} // Brief rotation on tap for feedback
+                  transition={{ duration: 0.2 }}
                 >
                   <ChevronDown className="w-4 h-4" />
                 </motion.div>
