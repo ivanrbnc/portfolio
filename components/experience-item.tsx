@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion"
 import type { Variants } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import Image from "next/image"
 import { useRef } from "react"
 
 const fadeInUp: Variants = {
@@ -20,6 +21,7 @@ type ExperienceItemProps = {
   company: string
   date: string
   description: string[]
+  image?: string
   index?: number
 }
 
@@ -28,6 +30,7 @@ export function ExperienceItem({
   company,
   date,
   description,
+  image,
   index = 0
 }: ExperienceItemProps) {
   const ref = useRef(null)
@@ -49,9 +52,16 @@ export function ExperienceItem({
       <Card className="ml-16 flex-1 dark:bg-slate-800 dark:border-slate-700">
         <CardHeader>
           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
-            <div>
-              <CardTitle>{position}</CardTitle>
-              <CardDescription className="text-base">{company}</CardDescription>
+            <div className="flex items-center gap-3">
+              {image && (
+                <div className="w-10 h-10 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-600 flex-shrink-0 bg-white">
+                  <Image src={image} alt={company} width={40} height={40} className="w-full h-full object-contain" />
+                </div>
+              )}
+              <div>
+                <CardTitle>{position}</CardTitle>
+                <CardDescription className="text-base">{company}</CardDescription>
+              </div>
             </div>
             <Badge variant="outline">{date}</Badge>
           </div>

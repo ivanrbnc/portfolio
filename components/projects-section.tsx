@@ -43,6 +43,39 @@ const staggerContainer: Variants = {
 }
 
 const allProjects = [
+
+  {
+    title: "Long Distance Relationship Snakes & Ladders",
+    description:
+      "Real-time Snakes & Ladders game for long-distance couples with custom mechanics and multiplayer synchronization.",
+    technologies: ["Next.js", "React", "Supabase", "Vercel"],
+    image: "/projects/ldr.jpg",
+    links: {
+      live: "https://snakes-and-ladders-ldr.vercel.app/",
+    },
+  },
+
+  {
+    title: "SIWADI - Warehouse Information System",
+    description:
+      "Warehouse management system for paint distributors.",
+    technologies: ["System Analysis", "Next.js", "React", "Java", "Spring Boot", "API", "Tailwind CSS", "Typescript"],
+    image: "/projects/siwadi.png",
+    links: {
+      demo: "https://www.youtube.com/watch?v=Np6-LmrMsLo",
+    },
+  },
+  {
+    title: "Ivanrbnc's Portfolio Website",
+    description:
+      "A modern responsive portfolio website built with Next.js and Tailwind CSS to showcase work and projects.",
+    technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    image: "/projects/portfolio.png",
+    links: {
+      demo: "https://ivanrbnc.xyz",
+      github: "https://github.com/ivanrbnc/portfolio",
+    },
+  },
   {
     title: "Apartment Listings Price Prediction",
     description:
@@ -64,24 +97,13 @@ const allProjects = [
     },
   },
   {
-    title: "SIWADI - Warehouse Information System",
+    title: "Phantom Striker - Game Development",
     description:
-      "Warehouse management system for paint distributors.",
-    technologies: ["System Analysis", "Next.js", "React", "Java", "Spring Boot", "API", "Tailwind CSS", "Typescript"],
-    image: "/projects/siwadi.png",
+      "2D action game built with Godot featuring platform mechanics and combat systems.",
+    technologies: ["Game Design", "Godot", "GDScript"],
+    image: "/projects/phantom-striker.png",
     links: {
-      demo: "https://www.youtube.com/watch?v=Np6-LmrMsLo",
-    },
-  },
-  {
-    title: "Ivanrbnc's Portfolio Website",
-    description:
-      "A modern responsive portfolio website built with Next.js and Tailwind CSS to showcase work and projects.",
-    technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
-    image: "/projects/portfolio.png",
-    links: {
-      demo: "https://ivanrbnc.xyz",
-      github: "https://github.com/ivanrbnc/portfolio",
+      demo: "https://team-bunglon.itch.io/phantom-striker",
     },
   },
   {
@@ -112,16 +134,6 @@ const allProjects = [
     image: "/projects/cultour.png",
     links: {
       demo: "https://www.figma.com/proto/tCyMxHEZ4aJSM8WttIsZpb/Cultour-Prototype--VYN-?node-id=190-1226&p=f&t=Eh2II78sf0GdkCDP-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=190%3A1226",
-    },
-  },
-  {
-    title: "Phantom Striker - Game Development",
-    description:
-      "2D action game built with Godot featuring platform mechanics and combat systems.",
-    technologies: ["Game Design", "Godot", "GDScript"],
-    image: "/projects/phantom-striker.png",
-    links: {
-      demo: "https://team-bunglon.itch.io/phantom-striker",
     },
   },
   {

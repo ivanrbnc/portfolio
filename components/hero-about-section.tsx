@@ -11,7 +11,6 @@ const dynamicTexts = [
   "I build projects.",
   "Software Engineer",
   "AI Enthusiast",
-  "Data Science Specialist",
   "Full-Stack Developer",
   "Innovation Driver",
 ]
@@ -111,28 +110,28 @@ export function HeroAboutSection() {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          
+
           {/* Left Side */}
           <motion.div
             variants={slideInLeft}
             className="space-y-6 lg:space-y-8"
           >
             <div className="space-y-2 lg:space-y-4">
-              <motion.h1 
+              <motion.h1
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold dark:text-slate-100"
                 variants={fadeInUp}
                 custom={0}
               >
                 Hello, I&apos;m
               </motion.h1>
-              <motion.h2 
+              <motion.h2
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold dark:text-slate-100"
                 variants={fadeInUp}
                 custom={1}
               >
                 Ivan Rabbani Cezeliano,
               </motion.h2>
-              <motion.div 
+              <motion.div
                 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-red-500 h-12 sm:h-14 md:h-16 flex items-center"
                 variants={fadeInUp}
                 custom={2}
@@ -190,48 +189,41 @@ export function HeroAboutSection() {
                 transition: { type: "spring", stiffness: 300, damping: 30 }
               }}
             >
-              <motion.h3 
+              <motion.h3
                 className="text-2xl lg:text-3xl font-bold text-center dark:text-slate-100 mb-6 lg:mb-8"
                 variants={fadeInUp}
                 custom={0}
               >
                 About Me
               </motion.h3>
-              <motion.div 
+              <motion.div
                 className="space-y-4 lg:space-y-6 dark:text-slate-300 text-sm lg:text-base"
                 variants={staggerContainer}
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
               >
                 <motion.p variants={fadeInUp} custom={1}>
-                  I&apos;m a fresh graduate with a degree in <strong>Information Systems</strong> from Universitas Indonesia. 
-                  My passion lies at the intersection of data and software, with a keen interest in 
-                  <span className="text-blue-600 font-semibold"> Data Analytics</span>, 
-                  <span className="text-green-600 font-semibold"> Data Science</span>, 
-                  <span className="text-purple-600 font-semibold"> Software Engineering</span>, and 
-                  <span className="text-red-600 font-semibold"> Artificial Intelligence</span>.
+                  <span className="text-purple-600 font-semibold dark:text-purple-400">Software engineer</span> and <span className="text-blue-600 font-semibold dark:text-blue-400">founder</span> with a strong <span className="text-green-600 font-semibold dark:text-green-400">backend engineering</span> background, currently building enterprise-grade systems in <span className="text-red-600 font-semibold dark:text-red-400">Go</span> and <span className="text-orange-600 font-semibold dark:text-orange-400">Apache Kafka</span> at PT Bank CIMB Niaga while independently founding a digital tech studio.
                 </motion.p>
                 <motion.p variants={fadeInUp} custom={2}>
-                  I love building innovative solutions and collaborating with others to create meaningful impact through technology. 
-                  I&apos;m always eager to learn new technologies and take on challenging projects that push my boundaries.
+                  Experienced across the full SDLC, from system design and development to deployment, with a track record of delivering impactful solutions in both corporate and entrepreneurial settings.
                 </motion.p>
               </motion.div>
 
               {/* Stats */}
               <motion.div
-                className="grid grid-cols-2 gap-4 lg:gap-6 mt-6 lg:mt-8"
+                className="grid grid-cols-3 gap-4 lg:gap-6 mt-6 lg:mt-8"
                 variants={staggerContainer}
                 initial="hidden"
                 animate={isInView ? "visible" : "hidden"}
               >
                 {[
-                  { value: "4+", label: "Internships" },
+                  { value: "6+", label: "Months of Work" },
                   { value: "10+", label: "Projects Built" },
-                  { value: "4+", label: "Years of Study" },
-                  { value: "17+", label: "Technologies" }
+                  { value: "20+", label: "Technologies" }
                 ].map((stat, i) => (
-                  <motion.div 
-                    key={i} 
+                  <motion.div
+                    key={i}
                     className="text-center"
                     variants={fadeInUp}
                     custom={i + 3}

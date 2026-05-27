@@ -16,10 +16,14 @@ const skills = [
   { name: "Postman", icon: "postman.png" },
   { name: "Tableau", icon: "tableau.png" },
   { name: "Go", icon: "go.png" },
-
+  { name: "Kafka" , icon: "kafka.png" },
+  { name: "Supabase", icon: "supabase.png" },
+  
   // Row 2 - Frontend & Tools focused
   { name: "React", icon: "react.png" },
   { name: "Next.js", icon: "next.png" },
+  { name: "Typescript", icon: "typescript.png" },
+  { name: "Vercel", icon: "vercel.png" },
   { name: "HTML", icon: "html.png" },
   { name: "CSS", icon: "css.png" },
   { name: "Javascript", icon: "javascript.png" },

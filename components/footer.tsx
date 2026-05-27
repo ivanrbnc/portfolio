@@ -29,7 +29,7 @@ export function Footer() {
         className="max-w-4xl mx-auto px-6 py-8 text-center"
       >
         <p className="text-slate-600 dark:text-slate-300">
-          © 2025 Ivan Rabbani Cezeliano
+          © {new Date().getFullYear()} Ivan Rabbani Cezeliano
         </p>
       </motion.div>
     </footer>
