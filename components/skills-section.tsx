@@ -18,6 +18,10 @@ const skills = [
   { name: "Go", icon: "go.png" },
   { name: "Kafka" , icon: "kafka.png" },
   { name: "Supabase", icon: "supabase.png" },
+  { name: "Kubernetes", icon: "k8s.png" },
+  { name: "Grafana", icon: "grafana.png" },
+  { name: "Jenkins", icon: "jenkins.png" },
+  { name: "SonarQube", icon: "sonarqube.png" },
   
   // Row 2 - Frontend & Tools focused
   { name: "React", icon: "react.png" },
