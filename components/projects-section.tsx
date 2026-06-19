@@ -45,13 +45,13 @@ const staggerContainer: Variants = {
 const allProjects = [
 
   {
-    title: "Snakes & Ladders Power",
+    title: "Snakes & Ladders",
     description:
       "Real-time Snakes & Ladders game for long-distance couples and friends online, with custom mechanics and multiplayer synchronization.",
     technologies: ["Next.js", "React", "Supabase", "Vercel"],
     image: "/projects/ldr.jpg",
     links: {
-      demo: "https://snakes-and-ladders-power.vercel.app/",
+      demo: "https://snakes-ladders.ivanrbnc.xyz",
       github: "https://github.com/ivanrbnc/snakes-and-ladders-power",
     },
   },
@@ -59,11 +59,11 @@ const allProjects = [
   {
     title: "Spark - Conversation Starter",
     description:
-      "Multiplayer conversation starter with 400+ prompts across 6 topic categories, per-player turn timers, and a results screen with talk-time pie charts. Built with a retro 8-bit UI.",
+      "Multiplayer conversation starter with 600+ prompts across 6 topic categories, per-player turn timers, and a results screen with talk-time pie charts. Built with a retro 8-bit UI.",
     technologies: ["React", "Vite", "Vercel"],
     image: "/projects/spark.png",
     links: {
-      demo: "https://spark-convo-starter.vercel.app/",
+      demo: "https://spark.ivanrbnc.xyz",
       github: "https://github.com/ivanrbnc/spark-convo-starter",
     },
   },
