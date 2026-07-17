@@ -17,6 +17,7 @@ const skills = [
   { name: "Tableau", icon: "tableau.png" },
   { name: "Go", icon: "go.png" },
   { name: "Kafka" , icon: "kafka.png" },
+  { name: "Flink", icon: "flink.png" },
   { name: "Supabase", icon: "supabase.png" },
   { name: "Kubernetes", icon: "k8s.png" },
   { name: "Grafana", icon: "grafana.png" },
