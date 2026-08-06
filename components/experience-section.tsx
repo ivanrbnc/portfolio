@@ -99,7 +99,7 @@ export function ExperienceSection() {
           <motion.div variants={slideInLeft}>
             <ExperienceItem
               position="Founder"
-              company="Vatalis Venture"
+              company="Vatalis Tech Studio"
               date="Mar 2026 – Now"
               image="/experience/vatalis.png"
               description={[
