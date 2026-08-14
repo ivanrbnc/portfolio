@@ -45,13 +45,23 @@ const staggerContainer: Variants = {
 const allProjects = [
 
   {
+    title: "Vatalis Tech Studio",
+    description:
+      "Freelance software studio offering web development, product design, and technical consulting services.",
+    technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    image: "/projects/vatalistech.png",
+    links: {
+      demo: "https://vatalistech.com/",
+    },
+  },
+  {
     title: "Snakes & Ladders",
     description:
       "Real-time Snakes & Ladders game for long-distance couples and friends online, with custom mechanics and multiplayer synchronization.",
     technologies: ["Next.js", "React", "Supabase", "Vercel"],
     image: "/projects/ldr.jpg",
     links: {
-      demo: "https://snakes-ladders.ivanrbnc.xyz",
+      demo: "https://snakes-ladders.vatalistech.com",
       github: "https://github.com/ivanrbnc/snakes-and-ladders-power",
     },
   },
@@ -63,11 +73,21 @@ const allProjects = [
     technologies: ["React", "Vite", "Vercel"],
     image: "/projects/spark.png",
     links: {
-      demo: "https://spark.ivanrbnc.xyz",
+      demo: "https://spark.vatalistech.com",
       github: "https://github.com/ivanrbnc/spark-convo-starter",
     },
   },
-
+  {
+    title: "Ignite",
+    description:
+      "Learning starter platform built to help users kickstart their educational journey, offering structured courses, progress tracking, and an intuitive interface to make self-paced learning more accessible and engaging.",
+    technologies: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
+    image: "/projects/ignite.png",
+    links: {
+      demo: "http://ignite.vatalistech.com/",
+      github: "https://github.com/ivanrbnc/ignite-learn-starter",
+    },
+  },
   {
     title: "SIWADI - Warehouse Information System",
     description:
@@ -211,7 +231,7 @@ export function ProjectsGrid() {
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
       >
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
           {allProjects.slice(0, visibleProjects).map((project, index) => (
             <motion.div
               key={`${project.title}-${index}`}

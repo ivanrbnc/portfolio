@@ -218,7 +218,7 @@ export function HeroAboutSection() {
                 animate={isInView ? "visible" : "hidden"}
               >
                 {[
-                  { value: "6+", label: "Months of Work" },
+                  { value: "10+", label: "Months of Work" },
                   { value: "10+", label: "Projects Built" },
                   { value: "20+", label: "Technologies" }
                 ].map((stat, i) => (
