@@ -98,20 +98,6 @@ export function ExperienceSection() {
         <div className="space-y-8">
           <motion.div variants={slideInLeft}>
             <ExperienceItem
-              position="Founder"
-              company="Vatalis Tech Studio"
-              date="Mar 2026 – Now"
-              image="/experience/vatalis.png"
-              description={[
-                "Founded and operate a digital tech studio delivering software products and solutions.",
-                "Generated 30,000,000+ IDR in revenue with continued growth pipeline. Responsible for end-to-end product development, client acquisition, and technical execution."
-              ]}
-              index={0}
-            />
-          </motion.div>
-
-          <motion.div variants={slideInLeft}>
-            <ExperienceItem
               position="Software Engineer"
               company="PT Bank CIMB Niaga Tbk"
               date="Oct 2025 – Now"

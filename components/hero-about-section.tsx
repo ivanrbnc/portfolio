@@ -203,10 +203,10 @@ export function HeroAboutSection() {
                 animate={isInView ? "visible" : "hidden"}
               >
                 <motion.p variants={fadeInUp} custom={1}>
-                  <span className="text-purple-600 font-semibold dark:text-purple-400">Software engineer</span> and <span className="text-blue-600 font-semibold dark:text-blue-400">founder</span> with a strong <span className="text-green-600 font-semibold dark:text-green-400">backend engineering</span> background, currently building enterprise-grade systems in <span className="text-red-600 font-semibold dark:text-red-400">Go</span> and <span className="text-orange-600 font-semibold dark:text-orange-400">Apache Kafka</span> at PT Bank CIMB Niaga while independently founding a digital tech studio.
+                  <span className="text-purple-600 font-semibold dark:text-purple-400">Software engineer</span> with a strong <span className="text-green-600 font-semibold dark:text-green-400">backend engineering</span> background, currently building enterprise-grade systems in <span className="text-red-600 font-semibold dark:text-red-400">Go</span> and <span className="text-orange-600 font-semibold dark:text-orange-400">Apache Kafka</span> at PT Bank CIMB Niaga.
                 </motion.p>
                 <motion.p variants={fadeInUp} custom={2}>
-                  Experienced across the full SDLC, from system design and development to deployment, with a track record of delivering impactful solutions in both corporate and entrepreneurial settings.
+                  Experienced across the full software development lifecycle, from system design and development to testing, deployment, and production support. Proven track record of delivering scalable and impactful solutions across <span className="text-blue-600 font-semibold dark:text-blue-400">enterprise systems</span>, <span className="text-pink-600 font-semibold dark:text-pink-400">AI-driven applications</span>, and <span className="text-teal-600 font-semibold dark:text-teal-400">full-stack development</span> through experience in both corporate and project-based environments.
                 </motion.p>
               </motion.div>
 
